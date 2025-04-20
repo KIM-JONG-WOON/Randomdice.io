@@ -4,9 +4,9 @@ import numpy as np
 import requests
 
 # 📱 모바일 레이아웃 최적화
-st.set_page_config(page_title="로또 추출기", layout="centered")
+st.set_page_config(page_title="추출기", layout="centered")
 
-st.title("🎱 로또 번호 추출기 (1줄 7개 가로 정렬)")
+st.title("🎱🎱🎱")
 
 # GitHub .xls Raw URL 입력
 xls_url = "https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xls"
