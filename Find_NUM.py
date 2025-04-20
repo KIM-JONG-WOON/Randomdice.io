@@ -42,14 +42,18 @@ if xls_url:
                 st.markdown(
                     f"""
                     <div style='
-                        background-color:#f0f0f0;
-                        border-radius:50%;
-                        padding:25px 0;
-                        text-align:center;
-                        font-size:24px;
-                        font-weight:bold;
-                        color:#2c3e50;
-                        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                        width: 16vw;
+                        aspect-ratio: 1 / 1;
+                        background: #f0f0f0;
+                        border-radius: 50%;
+                        text-align: center;
+                        font-size: 6vw;
+                        font-weight: bold;
+                        margin: auto;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         '>
                         {int(num)}
                     </div>
