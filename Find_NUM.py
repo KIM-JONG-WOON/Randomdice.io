@@ -32,8 +32,31 @@ if xls_url:
                 replace=False,
                 p=probabilities.values
             )
-            st.success("🎉 추출된 번호:")
-            st.write("🎱", sorted(selected))
+            selected = sorted(selected)
+
+        # ✅ 시각적으로 강조된 출력
+        st.subheader("🎉 추출된 번호")
+
+        cols = st.columns(7)
+        for i, num in enumerate(selected):
+            with cols[i]:
+                st.markdown(
+                    f"""
+                    <div style='
+                        background-color:#f0f0f0;
+                        border-radius:50%;
+                        padding:25px 0;
+                        text-align:center;
+                        font-size:24px;
+                        font-weight:bold;
+                        color:#2c3e50;
+                        box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+                        '>
+                        {int(num)}
+                    </div>
+                    """,
+                    unsafe_allow_html=True
+                )
             
     except Exception as e:
         st.error(f"❌ 오류 발생:\n\n{e}")
