@@ -25,14 +25,15 @@ if xls_url:
         probabilities = value_counts / value_counts.sum()
 
         # 추출 버튼
-        if st.button("✨ 번호 7개 추출하기"):
-            selected = np.random.choice(
-                probabilities.index,
-                size=7,
-                replace=False,
-                p=probabilities.values
-            )
-            selected = sorted(selected)
+        st.button("✨ 번호 7개 추출하기")
+        selected = np.random.choice(
+            probabilities.index,
+            size=7,
+            replace=False,
+            p=probabilities.values
+        )
+
+        selected = sorted(selected)
 
         # ✅ 시각적으로 강조된 출력
         st.subheader("🎉 추출된 번호")
