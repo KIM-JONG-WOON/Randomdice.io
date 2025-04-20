@@ -33,6 +33,7 @@ if xls_url:
             p=probabilities.values
         ))
 
+        st.button("✨ 번호 7개 추출하기")
         # ✅ 번호 출력: 반응형 스타일 (모바일 최적화)
         st.subheader("🎉 자동 추출된 번호")
         for num in selected:
