@@ -7,7 +7,7 @@ st.title("🎯 로또 번호 추출기 (GitHub 엑셀 기반)")
 
 # GitHub Raw URL 입력
 github_url = st.text_input("📂 GitHub 엑셀 파일 Raw URL을 입력하세요",
-    value="https://github.com/KIM-JONG-WOON/Randomdice.io/raw/refs/heads/main/NUM_Ro.xlsx")
+    value=""https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xlsx")
 
 if github_url:
     try:
