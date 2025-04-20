@@ -6,7 +6,6 @@ st.title("🎯 로또 번호 추출기 (.xls 엑셀 기반)")
 
 # ✅ GitHub에 올린 .xls Raw URL 입력
 xlsx_url = "https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xlsx"
-df = pd.read_excel(xlsx_url, engine='openpyxl')
 df.to_excel("NUM_Ro.xls", index=False, engine='xlwt')
 
 try:
