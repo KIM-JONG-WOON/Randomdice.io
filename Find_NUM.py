@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import requests
 
-st.title("🎯 당첨번호")
+st.title("🎯🎯🎯")
 
 # ✅ GitHub .xls 파일 Raw URL 입력
 xls_url = "https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xls"
@@ -31,11 +31,11 @@ if xls_url:
             p=probabilities.values
         )
         selected = sorted(selected)
-        st.button("✨ 번호 7개 추출하기")
 
         # ✅ 시각적으로 강조된 출력
         st.subheader("🎉 추출된 번호")
 
+        st.button("✨ 번호 7개 추출하기")
         cols = st.columns(7)
         for i, num in enumerate(selected):
             with cols[i]:
