@@ -3,11 +3,10 @@ import pandas as pd
 import numpy as np
 import requests
 
-st.title("🎯 로또 번호 추출기 (GitHub .xls 파일 기반)")
+st.title("🎯 당첨번호")
 
 # ✅ GitHub .xls 파일 Raw URL 입력
-xls_url = st.text_input("📂 GitHub의 .xls 파일 Raw URL을 입력하세요",
-    value="https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xls")
+xls_url = "https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xls"
 
 if xls_url:
     try:
