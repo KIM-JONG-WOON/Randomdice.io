@@ -24,9 +24,6 @@ if xls_url:
         value_counts = numeric_data.value_counts()
         probabilities = value_counts / value_counts.sum()
 
-        st.subheader("📊 번호별 출현 확률 (%)")
-        st.dataframe(probabilities.mul(100).round(2).rename("확률"))
-
         # 추출 버튼
         if st.button("✨ 번호 7개 추출하기"):
             selected = np.random.choice(
@@ -37,7 +34,7 @@ if xls_url:
             )
             st.success("🎉 추출된 번호:")
             st.write("🎱", sorted(selected))
-
+            
     except Exception as e:
         st.error(f"❌ 오류 발생:\n\n{e}")
         st.info("⚠️ 반드시 GitHub의 Raw URL을 입력했는지, 파일이 .xls 형식인지 확인하세요.")
