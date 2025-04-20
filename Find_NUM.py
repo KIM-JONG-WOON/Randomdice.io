@@ -2,16 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title("🎯 로또 번호 추출기 (GitHub 엑셀 기반)")
+st.title("🎯 로또 번호 추출기 (.xls 엑셀 기반)")
 
-# ✅ GitHub Raw URL 고정
-github_url = "https://raw.githubusercontent.com/KIM-JONG-WOON/Randomdice.io/main/NUM_Ro.xlsx"
+# ✅ GitHub에 올린 .xls Raw URL 입력
+xls_url = "https://raw.githubusercontent.com/yourusername/yourrepo/main/NUM_Ro.xls"
 
 try:
-    # 엑셀 불러오기 - openpyxl 명시!
-    df = pd.read_excel(github_url, usecols="C:I", engine='openpyxl')
-    
-    # 숫자 데이터 추출 및 전처리
+    df = pd.read_excel(xls_url, usecols="C:I", engine='xlrd')  # .xls는 xlrd 사용
+
+    # 데이터 처리
     numeric_data = df.select_dtypes(include='number').stack().dropna()
     value_counts = numeric_data.value_counts()
     probabilities = value_counts / value_counts.sum()
@@ -30,5 +29,4 @@ try:
         st.write("🎱", sorted(selected))
 
 except Exception as e:
-    st.error(f"❌ 엑셀 불러오기 실패: {e}")
-    st.info("💡 올바른 Raw URL인지 확인하세요.")
+    st.error(f"❌ .xls 불러오기 실패: {e}")
